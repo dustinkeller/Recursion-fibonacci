@@ -6,9 +6,13 @@
 //For example: fibonacciRecursive(6) should return 8
 
 function fibonacciIterative(n){
-  //code here;
+  let sum = [0, 1];
+  for(let i = 2; i <= n; i++) {
+    sum[i] = sum[i-1] + sum[i-2];
+  }
+  return sum[n];
 }
-fibonacciIterative(3);
+console.log(fibonacciIterative(9));
 
 function fibonacciRecursive(n) {
   if(n < 2) {
@@ -17,4 +21,4 @@ function fibonacciRecursive(n) {
   return fibonacciRecursive(n-1) + fibonacciRecursive(n-2);
 }
 
-console.log(fibonacciRecursive(3))
+console.log(fibonacciRecursive(9))
